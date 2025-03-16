@@ -35,5 +35,5 @@ The project implements three encryption/decryption methods:
 To compile the programs locally, open a terminal in the repository directory and run:
 
 ```bash
-gcc encryption.c -o encrypt -lcrypto
-gcc decryption.c -o decrypt -lcrypto
+gcc encrypt.c -o encrypt -lcrypto
+gcc decrypt.c -o decrypt -lcrypto
