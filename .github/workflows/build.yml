@@ -15,8 +15,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gcc libssl-dev
 
-      - name: Compile encryption.c
-        run: gcc src/encryption.c -o encrypt -lcrypto
+      - name: Compile encrypt.c
+        run: gcc src/encrypt.c -o encrypt -lcrypto
 
-      - name: Compile decryption.c
-        run: gcc src/decryption.c -o decrypt -lcrypto
+      - name: Compile decrypt.c
+        run: gcc src/decrypt.c -o decrypt -lcrypto
