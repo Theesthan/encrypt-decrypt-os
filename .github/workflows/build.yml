@@ -1,0 +1,22 @@
+name: Build C Code
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libssl-dev
+
+      - name: Compile encryption.c
+        run: gcc encryption.c -o encrypt -lcrypto
+
+      - name: Compile decryption.c
+        run: gcc decryption.c -o decrypt -lcrypto
